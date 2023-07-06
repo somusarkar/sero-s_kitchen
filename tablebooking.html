@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_style.css">
+    <title>Book a Table</title>
+    <style>
+        /* Generic Styles */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 2rem;
+    color: #333;
+    background-image: url(tablebooking_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 70%;
+  }
+  h1{
+    text-align: center;
+    background-color: #a62940;
+    color: white;
+  }
+  
+  form {
+    max-width: 40rem;
+    margin: auto;
+    padding: 2rem;
+    border: solid 2px #ddd;
+    background-color: rgba(148, 0, 211, 0.348);
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input,
+  textarea {
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    border: solid 1px #bbb;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+    color: #333;
+  }
+  
+  button {
+    border: none;
+    display: inline-block;
+    padding: 0.75rem 2.25rem;
+    border: 1px solid #ff96a9;
+    border-radius: 30px;
+    background-color: #ff002f;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  /* Generic Styles End */
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "name"
+      "email"
+      "message"
+      "button";
+    gap: 1.6rem;
+  }
+  
+  #name-block {
+    grid-area: name;
+  }
+
+  #phone-block{
+    grid-area: phone;
+  }
+  
+  #email-block {
+    grid-area: email;
+  }
+
+  #date-block{
+    grid-area: date;
+  }
+
+  #time-block{
+    grid-area: time;
+  }
+  #guest-block{
+    grid-area: guest;
+  }
+  
+  #message-block {
+    grid-area: message;
+  }
+  
+  button {
+    grid-area: button;
+  }
+  label{
+    padding: 2px;
+    background-color: rgb(113, 0, 161);
+    color: white;
+    font-family: arial;
+    border-radius: 10px;
+  }
+  input{
+    background-color: #ffdfdf;
+    color: rgb(0, 0, 113);
+  }
+  
+  @media screen and (min-width: 530px) {
+    form {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "name phone"
+        "email guest"
+        "date time"
+        "message message"
+        "button button";
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: -2em;
+}
+
+    </style>
+</head>
+<body>
+    <h1>BOOK A TABLE</h1>
+    <form>
+
+        <div id="name-block">
+          <label>
+            Full Name
+          </label>
+          <input type="text" name="name" placeholder="Full Name" />
+        </div>
+
+        <div id="phone-block">
+            <label>
+              Phone Number
+            </label>
+            <input type="phone number" name="phone number" placeholder="Phone Number" responsive/>
+          </div>
+
+        <div id="email-block">
+          <label>
+            Email Address
+          </label>
+          <input type="email" name="email" placeholder="Email Address" responsive/>
+        </div>
+
+        <div id="guest-block">
+            <label>
+                Number of Guest
+            </label>
+            <input type="number" name="number" placeholder="Number Of Guest" responsive/>
+        </div>
+
+        <div id="date-block">
+            <label for="date">Date</label>
+            <input type="date" name="date" responsive/>
+        </div>
+
+        <div id="time-block">
+            <label for="time">Time</label>
+            <input type="time" name="time" responsive/>
+        </div>
+
+        <div id="message-block">
+            <label>
+              Message
+            </label>
+            <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+          </div>
+
+        <button type="submit">Book Table
+        </button>
+      </form>
+
+      <footer>
+        SERO'S KITCHEN &copy 2023. ALL RIGHTS RESERVED
+      </footer>
+
+      <script>
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form field values
+            var name = document.querySelector('input[name="name"]').value;
+            var phoneNumber = document.querySelector('input[name="phone number"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var numberOfGuests = document.querySelector('input[name="number"]').value;
+            var date = document.querySelector('input[name="date"]').value;
+            var time = document.querySelector('input[name="time"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+            
+            // Perform form validation (you can add your own validation logic here)
+            if (name === "" || phoneNumber === "" || email === "" || numberOfGuests === "" || date === "" || time === "" || message === "") {
+                alert("Please fill in all the required fields.");
+                return;
+            }
+            
+            // Display the form data
+            var formData = "Name: " + name + "\nPhone Number: " + phoneNumber + "\nEmail: " + email + "\nNumber of Guests: " + numberOfGuests + "\nDate: " + date + "\nTime: " + time + "\nMessage: " + message;
+            alert(formData);
+            
+            // You can add further actions here, such as submitting the form data to a server
+            
+            // Reset the form
+            document.getElementById("booking-form").reset();
+        });
+    </script>
+</body>
+</html>

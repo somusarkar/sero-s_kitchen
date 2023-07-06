@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            background-color: azure;
+            background-image: url(menu_bg.jpg);
+            background-repeat: no-repeat;
+        }
+        
+        header {
+            background-color: rgba(26, 26, 26, 0.81);
+            color: rgba(218, 5, 186, 0.956);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h3 {
+            display: inline-block;
+            background-color: rgba(26, 26, 26, 0.816);
+            color: yellow;
+            width: 45vw;
+        }
+        
+        table {
+            background-color: rgba(43, 43, 45, 0.837);
+            width: 45vw;
+            color: antiquewhite;
+            text-align: center;
+        }
+        
+        table th {
+            color: deeppink;
+        }
+        
+        table td {
+            color: greenyellow
+        }
+        
+        .contact {
+            display: inline-block;
+            background-color: rgba(0, 139, 139, 0.648);
+            color: antiquewhite;
+            width: 40vw;
+            height: 12vh;
+            text-align: center;
+        }
+        
+        .box {
+            text-align: center;
+            color: crimson;
+        }
+        
+        .number {
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        a:hover {
+            color: aqua;
+            background-color: black;
+        }
+        
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            h3,
+            table,
+            .contact {
+                width: 90vw;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h3,
+            table,
+            .contact {
+                width: 95vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MENU OF SERO'S KITCHEN</h1>
+    </header>
+    <div class="starter">
+        <h3>STARTER</h3>
+        <div class="table">
+            <table border="2">
+                <tr>
+                    <th>
+                        FOOD ITEMS
+                    </th>
+                    <TH>
+                        PRICE
+                    </TH>
+                </tr>
+                <tr>
+                    <td>TOMATO SOUP</td>
+                    <TD>25</TD>
+                </tr>
+                <tr>
+                    <td>CHICKEN SOUP</td>
+                    <TD>50</TD>
+                </tr>
+                <TR>
+                    <TD>CRISPY CORN</TD>
+                    <TD>25</TD>
+                </TR>
+            </table>
+        </div>
+    </div>
+
+    <div class="salad">
+        <h3>SALAD</h3>
+        <div class="table">
+            <table BORDER="2">
+                <tr>
+                    <th>
+                        FOOD ITEMS
+                    </th>
+                    <TH>
+                        PRICE
+                    </TH>
+                </tr>
+                <TR>
+                    <TD>GLUCAMOL SALAD</TD>
+                    <TD>45</TD>
+                </TR>
+                <TR>
+                    <TD>CHICKEN SALAD</TD>
+                    <TD>65</TD>
+                </TR>
+            </table>
+        </div>
+    </div>
+
+    <div class="main-courses">
+        <h3>MAIN COURSES</h3>
+        <div class="table">
+            <table BORDER="2">
+                <tr>
+                    <th>FOOD ITEMS</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr>
+                    <td>GRILLED FISH & POTATO</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>CHIKEN & RICE</td>
+                    <td>156</td>
+                </tr>
+                <tr>
+                    <td>VEGETABLE PASTA</td>
+                    <td>95</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="desserts">
+        <h3>DESSERTS</h3>
+        <div class="table">
+            <table border="2">
+                <tr>
+                    <th>FOOD ITEMS</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr>
+                    <td>FRUIT & CREAM</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>ICE CREAM</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>CHOCOLATE CAKE</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>STRABERRY CAKE</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>APPLE PIE</td>
+                    <td>80</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="drinks">
+        <h3>DRINKS</h3>
+        <div class="table">
+            <table border="2">
+                <tr>
+                    <th>FOOD ITEMS</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr>
+                    <td>MINAREL WATER</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>FRESH FRUIT JUICE</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>COFFEE</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>TEA</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>BEER</td>
+                    <td>85</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="contact">
+        <span>DAILY FROM 10PM TO 23PM</span>
+        <div class="box">BOOK NOW</div>
+        <div class="number"><a href="7407062306">Call Us</a></div>
+    </div>
+</body>
+</html>
